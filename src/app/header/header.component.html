@@ -1,0 +1,12 @@
+<header>
+    <h1>Mon super Site</h1>
+    <nav>
+        <a  routerLink="/" id="connexion">Connexion</a>     
+        <a  routerLink="/inscription" id="inscription">Inscription</a>
+        <a  routerLink="/articles">Articles</a>
+        <a  routerLink="/ajoutArticles">Ajout articles</a>
+        <a  routerLink="/utilisateurs">Utilisateurs</a>
+        <a   [routerLink]="['/utilisateurs', UserId]">profil</a>
+        <a  (click)="ngDeconnexion()">Deconnection</a>
+    </nav>
+</header>

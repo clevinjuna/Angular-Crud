@@ -1,0 +1,17 @@
+<section>
+    <h2>Mes taches</h2>
+    <ul>
+        <app-todo-lig *ngFor="let tache of taches" [contenu]="tache" [paire]="getPaire()"></app-todo-lig>
+    </ul>
+    <div class="form">
+        <input type="text" [(ngModel)]="tacheEnCour">
+        <button (click)="ajoutTache()" appBtnRouge>Valider</button>
+    </div>
+    <div class="form">
+        <p>Pseudo utilisateur :</p>
+        <p>{{getPseudo()}}</p>
+    </div>
+    <button (click)="addNum()">Ajout num</button>
+    <button (click)="getPokeApi()">recup Api</button>
+    <p>{{retApi| json}}</p>
+</section>

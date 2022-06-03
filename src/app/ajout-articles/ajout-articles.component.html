@@ -1,0 +1,8 @@
+<p>ajout-articles works!</p>
+<section>
+    <form [formGroup]="AjoutForm" (ngSubmit)="ngAjout()">
+        <input type="text" placeholder="titre" formControlName="titre">
+        <input type="text" placeholder="contenu" formControlName="contenu">
+        <input type="submit" value="Envoyer">
+    </form>
+</section>

@@ -1,0 +1,35 @@
+<p>article-unite works!</p>
+<h1>{{article.titre}}</h1>
+<h3>{{article.contenu}}</h3>
+<button [style.visibility]="visibilityUserAth" (click)="ngSupr()">Suppression</button>
+<button [style.visibility]="visibilityUserAth" (click)="ngModif()">Modifier</button>
+
+<div class="commentaires">Commentaires :</div>
+    <app-ajout-commentaire idArticle="{{article.id_article}}"></app-ajout-commentaire>
+
+    <div *ngFor="let commentaire of commentaires; index as i">
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:300px">Auteur</th>
+                    <th style="width:300px">Commentaire</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="width:300px">{{auteurCom[i].pseudo}}</td>
+                    <td style="width:300px">{{commentaire.contenu}}</td>
+                    <button [style.visibility]="visibilityUserAthCom" (click)="ModifierCommentaire(commentaire.id_commentaire)">Modifier</button>
+                    <button [style.visibility]="visibilityUserAthCom" (click)="SupprimerCommentaire(commentaire.id_commentaire)">Supprimer</button>
+                    <form [style.visibility]="visibilityCom" [formGroup]="ModifComForm" (ngSubmit)="ngEnvoiModifCom(commentaire.id_commentaire)">
+                        <input id="contenu" type="text" placeholder="contenu" formControlName="contenu">
+                        <input type="submit" value="Envoyer">
+                    </form>
+                </tr>
+            </tbody>
+        </table>
+       
+       
+        <br>
+    </div>
+  

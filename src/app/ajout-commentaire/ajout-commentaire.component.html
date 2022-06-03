@@ -1,0 +1,5 @@
+<p>ajout-commentaire works!</p>
+<form [formGroup]="commentaireAddForm" (ngSubmit)="validFormAddCommentaire()">
+    <input type="text" placeholder="Commentaire..." formControlName="contenu">
+    <input type="submit" value="Envoyer">
+</form>

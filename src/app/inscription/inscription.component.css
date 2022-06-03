@@ -1,0 +1,21 @@
+section {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+form {
+    border: solid black 1px;
+    border-radius: 3px;
+    margin: 0 auto;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form>* {
+    margin: 10px;
+    width: 90%;
+    padding: 5px 20px;
+}

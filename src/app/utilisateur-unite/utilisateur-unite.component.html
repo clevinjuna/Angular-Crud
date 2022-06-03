@@ -1,0 +1,14 @@
+<p>utilisateur-unite works!</p>
+<td ng-If="user.avatar != ''"><img src="{{user.avatar}}" style="height:100px;width:100px;"/></td>
+<h1>Bonjour, {{user.pseudo}} !</h1>
+<h3>adresse ail :{{user.email}}</h3>
+<button  [style.visibility]="visibilityUserAth" (click)="ngModif()">Modification</button>
+<button  [style.visibility]="visibilityUserAth" (click)="ngSupr(user.id)">suppression</button>
+<form [style.visibility]="visibilityUser" [formGroup]="ModifUserForm" (ngSubmit)="ngEnvoiModifUser(user.id)">
+    <input id="pseudo" type="text" placeholder="pseudo" formControlName="pseudo">
+    <input id="email" type="text" placeholder="email" formControlName="email">
+    <input id="avatar" type="text" placeholder="avatar" formControlName="avatar">
+    <input id="password" type="text" placeholder="password" formControlName="password">
+    <input type="submit" value="Envoyer">
+</form>
+
